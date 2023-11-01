@@ -90,10 +90,32 @@ def cross_word_position_direction(bool_letter_list, length_word, index, directio
         
         bool_letter_list[index] = True
         index += direction
+        
+
+def cross_word_all_position_direction(bool_letter_list, length_word, list_position_direction):
+    
+    for element in list_position_direction:
+        
+        cross_word_position_direction(bool_letter_list, length_word, element[0], element[1])
+        
                         
                 
-        
+def find_magic_word(letter_list, bool_letter_list):
+    
+    if len(letter_list) != len(bool_letter_list):
+        raise ValueError('Both lists should have the same size')
+    
+    else:
+        for i in range(len(bool_letter_list)):
+            
+            if bool_letter_list[i]:
+                letter_list.pop(i)
+            
+    return ''.join(letter_list)
+
+
+            
     
            
-    
+find_magic_word(['C', 'B', 'D', 'M'],[False, True, True, True, True, False, False, False])
     
