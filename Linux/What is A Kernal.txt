@@ -1,0 +1,20 @@
+A kernal is a program that serves to communicate with the hardware (cpu, gpu, ect..). 
+Linux is a kernal. Kernals can do many things:
+1- Reading and writing out input and output devices
+2- CPU tasks, translates instrucitons for it
+3-Schdules Tasks to prevent erros
+4- Memory Allocation and Deallocation
+5- Built in Security, prevents programs from being crossed together
+and much more for other devices
+
+There are types of kernals, 
+1- Monolithic kernal (very fast but at the cost of having strict scheduling so it risks crashes)
+2- Microkernal (opposite of a monolithic)
+3- Exokernal
+4- Nanokernal
+5- Hybrid Kernal (Mix of 1 & 2)
+
+Linux Kernal --> Monolithic
+
+Windows --> NT Kernal
+Apple OS --> XNU (X not unix)

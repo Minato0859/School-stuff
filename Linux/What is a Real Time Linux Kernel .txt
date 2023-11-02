@@ -1,0 +1,26 @@
+Real Time Kernals offer:
+
+1- Low Latency
+2- Deterministic (Behaves in a way we understand wheras modern os are confusing)
+3- Predictable Response Times 
+
+Real time kernals can prioritize tasks from range 0-99 (99 highest priority)
+
+Premption/Premtable meaning: If tasks are running in a queue with lower priorities.
+			     Premption allows for higher priority tasks to execute
+			     while interupting the current tasks before returning back
+			     to complete the previous tasks
+
+
+Realtime kernal Types:
+
+1- Hard Realtime Kernal --> Strict Deadlines, Errors and tasks must be completed within tight times. 
+(EX:flight control, cruise control, Medical Devices, Defense Systems)
+2- Soft Realtime Kernal --> Allows more leeway, System will not crash if schedule tasks are not completed within deadlines
+(EX: Pcs, CD/DVD, Most Operating Systems)
+
+Examples of Real Time Linux Kernals:
+
+1- Xenomai - Hard Real Time (You can Patch Standard Linux to be Strict but its difficult)
+2- RTLinux - Hard Real Time (Already Patched)
+
