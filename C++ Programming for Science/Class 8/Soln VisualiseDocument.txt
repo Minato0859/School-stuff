@@ -1,0 +1,425 @@
+1)
+// Total a sequence of integers.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int total = 0; // current total
+   int number; // number of values
+   int value; // current value
+
+   // display prompt
+   cout << "Enter the number of values to be summed " 
+      << "followed by the values: \n";
+   cin >> number; // input number of values
+
+   // loop number times
+   for ( int i = 1; i <= number; i++ ) 
+   {
+      cin >> value;
+      total += value;
+   } // end for 
+
+   // display total
+   cout << "Sum of the " << number << " values is " << total << endl;
+} // end main
+
+2)
+// Average a sequence of integers.
+#include <iostream>
+using namespace std; 
+
+int main()
+{
+   int value; // current value
+   int count = 0; // number of inputs
+   int total = 0; // sum of inputs
+
+   // prompt for input
+   cout << "Enter integers (9999 to end):" << endl;
+   cin >> value;
+
+   // loop until sentinel value read from user
+   while ( value != 9999 )
+   {
+      total += value; // update sum
+      count++; // update number of inputs
+
+      cin >> value; // read in next value
+   } // end while
+
+   // if user entered at least one value
+   if ( count != 0 )
+      cout << "\nThe average is: "
+         << static_cast< double > ( total ) / count << endl;
+   else
+      cout << "\nNo values were entered." << endl;
+} // end main
+
+
+3)
+// Find the smallest of several integers.
+#include <iostream>
+using namespace std; 
+
+int main()
+{
+   int number; // number of values
+   int value; // current value
+   int smallest; // smallest value so far
+
+   cout << "Enter the number of integers to be processed ";
+   cout << "followed by the integers: " << endl;
+   cin >> number >> smallest;
+
+   // loop (number -1) times
+   for ( int i = 2; i <= number; i++ ) 
+   {
+      cin >> value; // read in next value
+
+      // if current value less than smallest, update smallest
+      if ( value < smallest )
+         smallest = value;
+   } // end for
+
+   // display smallest integer 
+   cout << "\nThe smallest integer is: " << smallest << endl;
+} // end main
+
+
+4)
+// Calculate and print product of odd integers from 1 to 15.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int product = 1;
+
+   // calculate product
+   // increment counter i by 2 for odd numbers
+   for ( int i = 3; i <= 15; i += 2 )
+      product *= i;
+
+   // display resulting product
+   cout << "Product of the odd integers from 1 to 15 is: "
+      << product << endl;
+} // end main
+
+
+
+5)
+// Create triangles of asterisks using nested for loops.
+#include <iostream>
+using namespace std; 
+
+int main()
+{
+   int row; // the row position
+   int column; // the column position
+   int space; // number of spaces to print
+
+   // first triangle
+   for ( row = 1; row <= 10; row++ )
+   {
+      for ( column = 1; column <= row; column++ )
+         cout << "*";
+
+      cout << endl;
+   } // end for 
+
+   cout << endl;
+
+   // second triangle
+   for ( row = 10; row >= 1; row-- )
+   {
+      for ( column = 1; column <= row; column++ )
+         cout << "*";
+
+      cout << endl;
+   } // end for 
+
+   cout << endl;
+
+   // third triangle
+   for ( row = 10; row >= 1; row-- )
+   {
+      for ( space = 10; space > row; space-- )
+         cout << " ";
+
+      for ( column = 1; column <= row; column++ )
+         cout << "*";
+
+      cout << endl;
+   } // end for 
+
+   cout << endl;
+
+   // fourth triangle
+   for ( row = 10; row >= 1; row-- ) 
+   {
+      for ( space = 1; space < row; space++ )
+         cout << " ";
+
+      for ( column = 10; column >= row; column-- )
+         cout << "*";
+
+      cout << endl;
+   } // end for 
+} // end main
+
+
+6)
+// Displaying bar charts using asterisks.
+#include <iostream>
+using namespace std; 
+
+int main()
+{
+   int number; // current number
+
+   cout << "Enter 5 numbers between 1 and 30: ";
+
+   // loop 5 times
+   for ( int i = 1; i <= 5; i++ ) 
+   {
+      cin >> number; // get a number from the user
+
+      // print asterisks corresponding to current input
+      for ( int j = 1; j <= number; j++ )
+         cout << '*';
+
+      cout << endl;
+   } // end for
+
+   cout << endl;
+} // end main
+
+
+
+7)
+/ Calculate sales, based on an product number and quantity sold
+#include <iostream>
+#include <iomanip> // parameterized stream manipulators
+using namespace std; 
+
+int main()
+{
+   double product1 = 0; // amount sold of first product
+   double product2 = 0; // amount sold of second product
+   double product3 = 0; // amount sold of third product
+   double product4 = 0; // amount sold of fourth product
+   double product5 = 0; // amount sold of fifth product
+
+   int productId = 1; // current product id number
+   int quantity; // quantity of current product sold
+
+   // set floating-point number format
+   cout << fixed << setprecision( 2 );
+
+   // ask user for product number until flag value entered
+   while ( productId != -1 )
+   {
+      // determine the product chosen
+      cout << "Enter product number (1-5) (-1 to stop): ";
+      cin >> productId;
+
+      // verify product id
+      if ( productId >= 1 && productId <= 5 )
+      {
+         // determine the number sold of the item
+         cout << "Enter quantity sold: ";
+         cin >> quantity;
+
+         // increment the total for the item by the
+         // price times the quantity sold
+         switch ( productId )
+         {
+            case 1:
+               product1 += quantity * 2.98;
+               break;
+
+            case 2:
+               product2 += quantity * 4.50;
+               break;
+
+            case 3:
+               product3 += quantity * 9.98;
+               break;
+
+            case 4:
+               product4 += quantity * 4.49;
+               break;
+
+            case 5:
+               product5 += quantity * 6.87;
+               break;
+         } // end switch
+      } // end if
+      else if ( productId != -1 )
+         cout <<
+            "Product number must be between 1 and 5 or -1 to stop" ;
+   } // end while 
+
+   // print summary
+   cout << endl;
+   cout << "Product 1: $" << product1 << endl;
+   cout << "Product 2: $" << product2 << endl;
+   cout << "Product 3: $" << product3 << endl;
+   cout << "Product 4: $" << product4 << endl;
+   cout << "Product 5: $" << product5 << endl;
+   cout << "total: $" 
+      << product1 + product2 + product3 + product4 + product5 << endl;
+} // end main
+
+8)
+// Approximate value for pi.
+#include <iostream> 
+#include <iomanip> // parameterized stream manipulators
+using namespace std;
+
+int main()
+{
+   long double pi = 0.0; // approximated value for pi 
+   long double denom = 1.0; // denominator of current term
+   long accuracy = 1000; // number of terms
+
+   // set floating-point number format
+   cout << fixed << setprecision( 8 );
+
+   // display table headers
+   cout << "Accuracy set at: " << accuracy << "\n\nterm\t\tpi\n";
+
+   // loop through each term
+   for ( long loop = 1; loop <= accuracy; loop++ ) 
+   {
+      if ( loop % 2 != 0 ) // if odd-numbered term, add current term
+         pi += 4.0 / denom;
+      else // if even-numbered term, subtract current term
+         pi -= 4.0 / denom;
+
+      // display number of terms and 
+      // approximated value for pi with 8 digits of precision
+      cout << loop << "\t\t" << pi << '\n';
+
+      denom += 2.0; // update denominator
+   } // end for
+
+   cout << endl;
+} // end main
+
+
+9)
+// Find Pythagorean triples using brute force computing.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int count = 0; // number of triples found 
+   long int hypotenuseSquared; // hypotenuse squared
+   long int sidesSquared; // sum of squares of sides
+
+   cout << "Side 1\tSide 2\tSide3" << endl;
+
+   // side1 values range from 1 to 500
+   for ( long side1 = 1; side1 <= 500; side1++ ) 
+   {
+      // side2 values range from current side1 to 500
+      for ( long side2 = side1; side2 <= 500; side2++ ) 
+      {
+         // hypotenuse values range from current side2 to 500
+         for ( long hypotenuse = side2; hypotenuse <= 500; hypotenuse++ ) 
+         {
+            // calculate square of hypotenuse value
+            hypotenuseSquared = hypotenuse * hypotenuse;
+
+            // calculate sum of squares of sides
+            sidesSquared = side1 * side1 + side2 * side2;
+
+            // if (hypotenuse)^2 = (side1)^2 + (side2)^2,
+            // Pythagorean triple
+            if ( hypotenuseSquared == sidesSquared ) 
+            {
+               // display triple
+               cout << side1 << '\t' << side2 << '\t' 
+                  << hypotenuse << '\n';
+               count++; // update count
+            } // end if
+         } // end for
+      } // end for
+   } // end for
+       
+   // display total number of triples found
+   cout << "A total of " << count << " triples were found." << endl;
+} // end main
+
+10)
+
+// crypt.cpp
+//
+// This program calculates the solution to the cryptarithmetic
+// puzzle TOO + TOO + TOO + TOO = GOOD where each letter represents
+// a single digit with no duplication.  It loops over all possible
+// values for each digit, ensures that the digits are unique, computes
+// the sum, and if the equation is satisfied outputs the values for
+// each digit.
+// We must make sure to account for the possibility of carries when
+// adding digits.
+
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+// ======================
+//     main function
+// ======================
+int main()
+{
+
+ // Variable declarations
+ int t, o, g, d;
+
+ //
+ // --------------------------------
+ // ----- ENTER YOUR CODE HERE -----
+ // --------------------------------
+
+ // Loop over all values for "T", "O", "G", and "D"
+ for (t = 0; t <= 9; t++)
+   for (o = 0; o <=9; o++)
+     for (g = 0; g <= 9; g++)
+       for (d = 0; d <= 9; d++)
+		{
+			// Ensure uniqueness for each digit
+			if ((t != o) && (t != g) && (t != d) &&
+			   (o != g) && (o != d) &&
+			   (g != d))
+			   {
+				   // Compute rightmost carry and digit
+				   int carry0 = (o + o + o + o) / 10;
+				   int digit0 = (o + o + o + o) % 10;
+				   // Compute second digit from right
+				   int carry1 = (carry0 + o + o + o + o) / 10;
+				   int digit1 = (carry0 + o + o + o + o) % 10;
+				   // Compute third digit from right
+				   int carry2 = (carry1 + t + t + t + t) / 10;
+				   int digit2 = (carry1 + t + t + t + t) % 10;
+				   // Check if equation matches7
+				   if ((carry2 == g) && (digit2 == o) &&
+				       (digit1 == o) && (digit0 == d))
+				     {
+					 cout << "The values are: T = " << t <<
+ 					    " O = " << o << " G = " << g <<
+    " D = " << d << endl;
+					 }
+			   }
+		}
+
+ // --------------------------------
+ // --------- END USER CODE --------
+ // --------------------------------
+ cout << endl;
+}

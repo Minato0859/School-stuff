@@ -1,0 +1,136 @@
+
+________________________________________________________________________
+
+1.Write a program that inputs an integer that represents a length of time in seconds.  
+The program should then output the number of hours, minutes, and seconds that corresponds to that number of seconds.  
+For example, if the user inputs 50391 total seconds then the program should output 13 hours, 59 minutes, and 51 seconds.  
+
+// Programming Project 1.11
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	cout << "Enter a time in seconds." << endl;
+	int s;
+	cin >> s;
+
+	int hours, minutes, seconds;
+	hours = s / 3600;
+	minutes = (s % 3600) / 60;
+	seconds = (s % 3600) % 60;
+
+	cout << s << " total seconds is equivalent to " <<
+		hours << " hours, " << minutes <<
+		" minutes, and " << seconds <<
+		" seconds. "<< endl;
+
+}
+
+2. Write a program that calculates how much a deposit of a certain amount of dollars will grow in a year,when the rate of grow is 6.9% annualy.
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	const double RATE = 6.9 ;
+	double deposit ;
+	cout << " Enter the amount of your deposit in $ ";
+	cin  >> deposit;
+	
+	double newBalance;
+	newBalance = deposit + deposit * (RATE/100);
+	cout << "In one year,the deposit of " << deposit << " $"
+	     << " will grow to " << newBalance << " $";
+}
+
+3.Ideal Body Weight Estimation
+A simple rule to estimate your ideal body weight is to allow 110 pounds for the first 5 feet of height and 5 pounds for each additional inch.  
+Write a program with a variable for the height of a person in feet and another variable for the additional inches and input values for these variables from the keyboard.   
+Assume the person is at least 5 feet tall.  
+For example, a person that is 6 feet and 3 inches tall would be represented with a variable that stores the number 6 and another variable that stores the number 3.
+Based on these values calculate and output the ideal body weight.
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+        int heightFeet = 5;
+        int heightInches = 5;
+        cout << "Your ideal body weight is ";
+        int weight = 110 + ((heightFeet - 5)*12 + heightInches) * 5;
+        cout << weight << " pounds." << endl;
+
+        return 0;
+}
+4.Lethal Caffeine
+Scientists estimate that consuming roughly 10 grams of caffeine at once is a lethal overdose. 
+Write a program that inputs the number of milligrams of caffeine in a drink and outputs how many drinks it would take to kill a person. 
+A 12 ounce can of cola has approximately 34 mg of caffeine while a 16 ounce cup of coffee has approximately 160 mg of caffeine.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int mg;
+
+  cout << "How many milligrams of caffeine in the drink?" << endl;
+  cin >> mg;
+
+  // 10 grams to kill a person is 10000 mg
+  int numDrinks = 10000 / mg;
+  cout << "The number of drinks it will take to kill someone is " <<
+       numDrinks << " drinks." << endl;
+
+  return 0;
+}
+
+5.Write a program that allows the user to enter a time in seconds and then outputs how far an object would drop if it is in freefall for that length of time.  
+Assume no friction or resistance from air and a constant acceleration of 32 feet per second due to gravity.( You can rewrite the program to use m/s ). 
+the equation: distance = 1/2 * acceleration * time * time
+	 
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	cout << "Enter a time in seconds." << endl;
+	int s;
+	cin >> s;
+
+	int distance;
+	distance = (32 / 2) * (s * s);
+
+	cout << "An object in freefall for " << s << 
+		" seconds will fall " << distance <<
+		" feet." << endl;
+}
+
+
+6.Enter an integer number from the keyboard.
+Print a message indicating if the number is odd or even.
+
+#include <iostream> // allows program to perform input and output
+using namespace std; // program uses names from the std namespace
+
+int main()
+{
+   int number; // integer read from user
+
+   cout << "Enter an integer: "; // prompt
+   cin >> number; // read integer from user
+
+   if ( number % 2 == 0 )
+      cout << "The integer " << number << " is even." << endl;
+
+   if ( number % 2 != 0 )
+      cout << "The integer " << number << " is odd." << endl;
+} // end main
+

@@ -22,8 +22,7 @@ def letter_positions(letter_list, character):
     return list_of_indices
             
             
-            # valid_word_pos_direction(['A', 'B', 'C', 'D', 'C', 'M'],BCD,1,1) == True; 
-# Got: False
+
 
 def valid_word_pos_direction(letter_list, word, index, direction):
        
@@ -32,29 +31,18 @@ def valid_word_pos_direction(letter_list, word, index, direction):
         # if direction == 1:
             
             for i in range(len(word)):
-                if letter_list[index] != word[i] or is_outside_list(letter_list, index):
+                if  is_outside_list(letter_list, index) or letter_list[index] != word[i]:
                     return False
                 index += direction
                 
             return True  
-        # if direction == -1:
-            
-        #     for i in range(len(word)):
-        #         if letter_list[index] != word[i] or is_outside_list(letter_list, index):
-        #             return False
-        #         index -= 1
 
-                
-        # return True                    
-    
-# Expected: direction_word_given_position(['A', 'B', 'C', 'D', 'C', 'M'],BCD,1) == [1]; 
-# Got: [1, -1]
-    
     
 def direction_word_given_position(letter_list, word, index):
+    direction_list = []
     
     if word[0] == letter_list[index]:
-        direction_list = []
+        
         
         if valid_word_pos_direction(letter_list, word, index, -1):
             direction_list.append(-1)
@@ -69,14 +57,10 @@ def position_direction_word(letter_list, word):
     position_direction_list = []
     
     for i in letter_position_list:
-        # direction_list.append(direction_word_given_position(
-        #     letter_list, word, i))
+       
         directions = direction_word_given_position(letter_list, word, i)
         
-        if  directions == []:
-            letter_position_list.pop(i)
-        
-        else:
+        if  directions != []:
             for j in directions:
                 position_direction_list.append([i, j])
             
@@ -101,21 +85,49 @@ def cross_word_all_position_direction(bool_letter_list, length_word, list_positi
                         
                 
 def find_magic_word(letter_list, bool_letter_list):
+    letters = []
     
     if len(letter_list) != len(bool_letter_list):
         raise ValueError('Both lists should have the same size')
     
+    
     else:
         for i in range(len(bool_letter_list)):
             
-            if bool_letter_list[i]:
-                letter_list.pop(i)
+            if bool_letter_list[i] == False:
+                letters.append(letter_list[i])
             
-    return ''.join(letter_list)
+    return ''.join(letters)
 
 
+def word_search(letter_list, word_list):
+    
+    bool_letter_list = [False for i in letter_list]
+    
+    for word in word_list:
+        length_word = len(word)
+        
+        position_direction_list = position_direction_word(letter_list, word)
+        
+        cross_word_all_position_direction(bool_letter_list, length_word, position_direction_list)
+    
+    magic_word = find_magic_word(letter_list, bool_letter_list)
+    
+    return magic_word
+            
+def word_search_main(letters, words):
+    
+    letter_list = [letter.upper() for letter in letters]
+    word_list = words.split('-')
+    
+    for i in range(len(word_list)):
+        word_list[i] = word_list[i].upper()
+    
+    magic_word = word_search(letter_list, word_list)
+    
+    return magic_word
+    
             
     
            
-find_magic_word(['C', 'B', 'D', 'M'],[False, True, True, True, True, False, False, False])
     

@@ -1,0 +1,168 @@
+1.Write a program that asks the user to enter two integers,
+obtains the numbers from the user, then prints the larger 
+number followed by the words " is larger". If the numbers 
+are equal, print the message " These numbers are equal".
+
+#include <iostream> // allows program to perform input and output
+using namespace std; // program uses names from the std namespace
+
+int main()
+{
+   int number1{0}; // first integer read from user
+   int number2{0}; // second integer read from user
+
+   cout << "Enter two integers: "; // prompt user for data
+   cin >> number1 >> number2; // read two integers from user
+
+   if (number1 == number2) {
+      cout << "These numbers are equal." << endl;
+   }
+
+   if (number1 > number2) {
+      cout << number1 << " is larger." << endl;
+   }
+
+   if (number2 > number1) {
+      cout << number2 << " is larger." << endl;
+   }
+} 
+
+2. Write a program that inputs three integers from the keyboard and prints the 
+sum, average, product,smallest and largest of these numbers.The screen dialog
+should appear as follows:
+
+Input three different integers ; 13  27  14
+Sum is 54
+Average is 18
+Product is 4914
+Smallest is 13
+Largest is 27
+
+
+#include <iostream> // allows program to perform input and output
+using namespace std; // program uses names from the std namespace
+
+int main()
+{
+   int number1{0}; // first integer read from user
+   int number2{0}; // second integer read from user
+   int number3{0}; // third integer read from user
+   int smallest{0}; // smallest integer read from user
+   int largest{0}; // largest integer read from user
+
+   cout << "Input three different integers: "; // prompt
+   cin >> number1 >> number2 >> number3; // read three integers
+
+   largest = number1; // assume first integer is largest
+
+   if (number2 > largest) { // is number2 larger?
+      largest = number2; // number2 is now the largest
+   }
+
+   if (number3 > largest) { // is number3 larger?
+      largest = number3; // number3 is now the largest
+   }
+
+   smallest = number1; // assume first integer is smallest
+
+   if (number2 < smallest) { // is number2 smaller?
+      smallest = number2; // number2 is now the smallest
+   }
+
+   if (number3 < smallest) { // is number3 smaller?
+      smallest = number3; // number3 is now the smallest
+   }
+
+   cout << "Sum is " << number1 + number2 + number3 
+      << "\nAverage is " << (number1 + number2 + number3) / 3 
+      << "\nProduct is " << number1 * number2 * number3 
+      << "\nSmallest is " << smallest 
+      << "\nLargest is " << largest << endl;
+} 
+
+3.An employee is paid with a rate of 16.78 $ per hour if he works less or equal 
+than 40 hours per week.For the hours that he is working overtime he is paid 50% more.
+Write a program that asks the user to enter the number of hours worked in a week and 
+calculates the salary that the employee will be paid.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+	const double RATE{ 16.78 };
+	int hours;
+	double pay;
+	cout << " How many hours you worked this week ? ";
+	cin >> hours;
+
+	if (hours <= 40)
+		pay = RATE * hours;
+
+	if (hours > 40)
+		pay = RATE * 40 + RATE * (hours - 40) * 1.5;
+
+	
+	cout << "\nThe salary is : " << pay << endl;
+	return 0;
+}
+
+
+Since the number of hours can be only larger or smaller than 40 we can write our program as follows:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+	const double RATE{ 16.78 };
+	int hours;
+	double pay;
+	cout << " How many hours you worked this week ? ";
+	cin >> hours;
+
+	if (hours <= 40)
+		pay = RATE * hours;
+
+	else
+		pay = RATE * 40 + RATE * (hours - 40) * 1.5;
+
+	
+	cout << "\nThe salary is : " << pay << endl;
+	return 0;
+}
+
+
+4. Write a program that prompts the user to enter five test scores and then prints the average test score.
+Assume that the test scores are decimal numbers.
+
+5.Write a program that does the following:
+a)Prompts the user to input five decimal numbers.
+b)Prints the five decimal numbers.
+c)Converts each decimal number to the nearest integer.
+d)Adds the five integers.
+e)Prints the sum and the average of the five integers.
+
+5. Write a program that prompts the user to enter the capacity, in gallons, of an automobile fuel tank and
+the miles per gallons the automobile can be driven.The program outputs the number of miles the automobile
+can be driven without refueling.
+
+6.Write a program that prompts the user to input a length expressed in centimeters.The program should then convert
+the length to inches ( to the nearest inch )and output the length expressed in yards, feet and inches, in this order.
+For example, suppose the input for centimeters is 312. To the nearest inch, 312 centimeters is equal to 123 inches.
+123 inches would thus be output as:
+3 yard(s), 1 feet (foot), and 3 inch(es).
+
+7.You found an exciting summer job for five weeks.It pays, say, 15.50$ per hour.Suppose that the total tax you pay on your summer
+job income is 14%. After paying the taxes, you spend 10% of your net income to buy new clothes and other accessories for the next 
+school year and 1% to buy school supplies.After buying clothes and school supplies, you use 25% of the remaining money to buy 
+savings bonds.For each dollar you spend to buy savings bonds, your parents spend $0.50 to buy additional savings bonds for you.
+Write a program that prompts the user to enter the pay rate for an hour and the number of hours you worked each week.
+The program then outputs the following:
+a. Your income before and after taxes from your summer job.
+b. The money you spend on clothes and other accessories.
+c. The money you spend on school supplies.
+d. The money you spend to buy savings bonds.
+e. The money your parents spend to buy additional savings bonds for you. 

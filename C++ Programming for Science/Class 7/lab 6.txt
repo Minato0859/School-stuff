@@ -1,0 +1,443 @@
+0.
+// What does this program print?
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int count = 1; // initialize count
+
+   while ( count <= 10 ) // loop 10 times
+   {   
+      // output line of text
+      cout << ( count % 2 ? "****" : "++++++++" ) << endl;
+      ++count; // increment count
+   } // end while
+} // end main
+
+
+
+1.
+// Calculate the sum of the integers from 1 to 10.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int sum; // stores sum of integers 1 to 10
+   int x; // counter
+
+   x = 1; // count from 1
+   sum = 0; // initialize sum
+
+   while ( x <= 10 ) // loop 10 times
+   {
+      sum += x; // add x to sum
+      x++; // increment x
+   } // end while
+
+   cout << "The sum is: " << sum << endl;
+} // end main
+
+
+
+2.
+// Calculate the value of product and quotient.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int x = 5;
+   int product = 5;
+   int quotient = 5;
+
+   // part a
+   product *= x++; // part a statement
+   cout << "Value of product after calculation: " << product << endl;
+   cout << "Value of x after calculation: " << x << endl << endl;
+
+   // part b
+   x = 5; // reset value of x
+   quotient /= ++x; // part b statement
+   cout << "Value of quotient after calculation: " << quotient << endl;
+   cout << "Value of x after calculation: " << x << endl << endl;
+} // end main
+
+
+
+3.
+// What does this program print?
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int y; // declare y
+   int x = 1; // initialize x
+   int total = 0; // initialize total
+
+   while ( x <= 10 ) // loop 10 times
+   {    
+      y = x * x; // perform calculation
+      cout << y << endl; // output result
+      total += y; // add y to total
+      ++x; // increment counter x
+   } // end while
+
+   cout << "Total is " << total << endl; // display result
+} // end main
+
+
+4.
+// Calculate average MPG with sentinel-controlled repetition.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   double gallons; // gallons used for current tank
+   double miles; // miles driven for current tank
+   double totalGallons = 0; // total gallons used
+   double totalMiles = 0; // total miles driven
+
+   double milesPerGallon; // miles per gallon for tankful
+   double totalMilesPerGallon; // miles per gallon for trip
+
+   // processing phase
+   // get miles used for first tank
+   cout << "Enter miles driven (-1 to quit): ";
+   cin >> miles;
+   cout << fixed; // set floating-point number format
+
+   // exit if the input is -1; otherwise, proceed with the program
+   while ( miles != -1 )
+   {
+      // prompt user for gallons and obtain the input from user
+      cout << "Enter gallons used: ";
+      cin >> gallons;
+
+      // add gallons and miles for this tank to total
+      totalMiles += miles;
+      totalGallons += gallons;
+
+      // calculate miles per gallon for the current tank
+      if ( gallons != 0 )
+      {
+         milesPerGallon =  miles / gallons;
+         cout << "MPG this tankful: " << milesPerGallon;            
+      } // end if 
+
+      // calculate miles per gallon for the total trip
+      if ( totalGallons != 0 )
+      {
+         totalMilesPerGallon = totalMiles / totalGallons;
+         cout << "\nTotal MPG: " << totalMilesPerGallon;
+      } // end if 
+
+      // prompt user for new value for miles
+      cout << "\n\nEnter miles driven (-1 to quit): ";
+      cin >> miles;
+   } // end while       
+} // end main
+
+
+5.
+//Credit Limit Calculator
+#include <iomanip> // parameterized stream manipulators
+using namespace std;
+
+int main()
+{
+   int account; // account number
+   double balance; // account balance
+   double charges; // total charges
+   double credits; // total credits
+   double creditLimit; // allowed credit limit
+
+   cout << "Enter account number (or -1 to quit): ";
+   cin >> account; // read in account number
+
+   // set floating-point number format
+   cout << fixed << setprecision( 2 );
+
+   // exit if the input is -1; otherwise proceed with the program
+   while ( account != -1 )
+   {
+      cout << "Enter beginning balance: ";
+      cin >> balance; // read in original balance
+
+      cout << "Enter total charges: ";
+      cin >> charges; // read in charges
+
+      cout << "Enter total credits: ";
+      cin >> credits; // read in credits
+
+      cout << "Enter credit limit: ";
+      cin >> creditLimit; // read in credit limit
+
+      // calculate and display new balance
+      balance = balance + charges - credits;
+      cout << "New balance is " << balance;
+
+      // display a warning if the user has exceed the credit limit
+      if ( balance > creditLimit )
+         cout << "\nAccount:      " << account
+            << "\nCredit limit: " << creditLimit 
+            << "\nBalance:      " << balance 
+            << "\nCredit Limit Exceeded.";
+
+      cout << "\n\nEnter account number (or -1 to quit): ";
+      cin >> account; // read in next account number
+   } // end while
+} // end main
+
+6.
+// Calculate salesperson earnings.
+#include <iostream>
+#include <iomanip> // parameterized stream manipulators
+using namespace std; // sets numeric output precision
+
+int main()
+{
+   double sales; // gross weekly sales
+   double wage; // commissioned earnings
+   
+   // processing phase
+   // get first sales
+   cout << "Enter sales in dollars (-1 to end): ";
+   cin >> sales;
+
+   // set floating-point number format
+   cout << fixed << setprecision( 2 );
+
+   // loop until sentinel value read from user
+   while ( sales != -1.0 ) 
+   {    
+      wage = 200.0 + 0.09 * sales; // calculate wage
+      cout << "Salary is: $" << wage; // display salary
+      
+      // prompt for next sales
+      cout << "\n\nEnter sales in dollars (-1 to end): ";
+      cin >> sales;
+   } // end while
+} // end main
+
+7.
+// Calculating wages.
+#include <iostream>
+#include <iomanip> // parameterized stream manipulators
+using namespace std; 
+
+int main()
+{
+   double hours; // total hours worked
+   double rate; // hourly pay rate
+   double salary; // gross pay
+
+   // processing phase
+   // get first employee's hours worked
+   cout << "Enter hours worked (-1 to end): ";
+   cin >> hours;
+
+   // set floating-point number format
+   cout << fixed << setprecision( 2 );
+
+   // loop until sentinel value read from user
+   while ( hours != -1.0 ) 
+   {
+      // get hourly rate
+      cout << "Enter hourly rate of the employee ($00.00): ";
+      cin >> rate;
+      
+      // if employee worked less than 40 hours
+      if ( hours <= 40 )
+         salary = hours * rate;
+      else // else, compute "time-and-a-half" pay
+         salary = 40.0 * rate + ( hours - 40.0 ) * rate * 1.5;
+      
+      cout << "Salary is $" << salary; // display gross pay
+
+      // prompt for next employee's data
+      cout << "\n\nEnter hours worked (-1 to end): ";
+      cin >> hours;
+   } // end while
+} // end main
+
+
+8.
+// Finding the largest number.
+#include <iostream>
+#include <iomanip> // parameterized stream manipulators
+using namespace std; 
+
+int main()
+{
+   int counter = 0; // counter for 10 repetitions 
+   int number; // current number input
+   int largest; // largest number found so far
+   
+   cout << "Enter the first number: "; // prompt for first number
+   cin >> largest; // get first number
+
+   while ( ++counter < 10 ) // loop 10 times
+   {
+      cout << "Enter the next number : "; // prompt for next input 
+      cin >> number; // get next number
+      
+      // if current number input is greater than largest number,
+      // update largest
+      if ( number > largest )
+         largest = number;
+   } // end while
+   
+   cout << "Largest is " << largest << endl; // display largest number
+} // end main
+
+
+
+9.
+// Print table of values with counter-controlled repetition.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int n = 0;
+   
+   // display table headers with tabbing
+   cout << "N\t10*N\t100*N\t1000*N\n\n";
+
+   while ( ++n <= 5 ) // loop 5 times
+   {
+      // calculate and display table values
+      cout << n << '\t' << 10 * n << '\t' << 100 * n
+         << '\t' << 1000 * n << '\n';
+   } // end while
+
+   cout << endl;
+} // end main
+
+10.
+// Find the two largest numbers.
+#include <iostream>
+using namespace std; 
+
+int main()
+{
+   int counter = 0; // counter for 10 repetitions
+   int number; // current number input
+   int largest; // largest number found
+   int secondLargest; // second-largest number found
+
+   cout << "Enter the first number: "; // prompt for first number
+   cin >> largest; // get first number
+      
+   cout << "Enter next number: "; // prompt for second number
+   cin >> number; // get second number
+   
+   // compare second number with first number
+   if ( number > largest )
+   {
+      secondLargest = largest;
+      largest = number;
+   } // end if
+   else
+      secondLargest = number;
+
+   counter = 2; // set counter
+
+   // get rest of the numbers and find the largest and secondLargest
+   while ( counter < 10 ) 
+   {
+      cout << "Enter next number: "; // prompt for next number
+      cin >> number; // get next number
+         
+      // compare current number with largest and secondLargest
+      if ( number > largest ) 
+      {
+         secondLargest = largest;
+         largest = number;
+      } // end if
+      else if ( number > secondLargest )
+         secondLargest = number;
+
+      counter++; // increment counter
+   } // end while
+
+   // display largest two numbers
+   cout << "\nLargest is " <<  largest 
+      << "\nSecond largest is " << secondLargest << endl;
+} // end main
+
+
+11.
+// Examination results problem: Validating input.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   // initializing variables in declarations
+   int passes = 0; // number of passes
+   int failures = 0; // number of failures
+   int studentCounter = 1; // student counter
+   int result; // one exam result (1 = pass, 2 = fail)
+
+   // process 10 students using counter-controlled loop
+   while ( studentCounter <= 10 )
+   {
+      // prompt user for input and obtain value from user
+      cout << "Enter result (1 = pass, 2 = fail): ";
+      cin >> result;
+
+      if ( result == 1 ) // 1 is a valid input
+      {
+         passes = passes + 1; // increment passes
+         studentCounter = studentCounter + 1; // increment studentCounter
+      } // end if
+      else if ( result == 2 ) // 2 is a valid input
+      {
+         failures = failures + 1; // increment failures
+         studentCounter = studentCounter + 1; // increment studentCount
+      } // end else if
+      else // invalid input; tell user and prompt again
+      {
+         cout << "Invalid input" << endl;
+      } // end else
+   } // end while
+
+   // termination phase; display number of passes and failures
+   cout << "Passed " << passes << "\nFailed " << failures << endl;
+
+   // determine whether more than eight students passed
+   if ( passes > 8 )
+      cout << "Bonus to instructor!" << endl;
+} // end main
+
+
+
+12.
+// What does this program print?
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int row = 10; // initialize row
+	int column; // declare column
+
+	while (row >= 1) // loop until row < 1
+	{
+		column = 1; // set column to 1 as iteration begins
+
+		while (column <= 10) // loop 10 times
+		{
+			cout << (row % 2 ? "<" : ">"); // output
+			++column; // increment column
+		} // end inner while
+
+		--row; // decrement row
+		cout << endl; // begin new output line
+	} // end outer while
+} // end main

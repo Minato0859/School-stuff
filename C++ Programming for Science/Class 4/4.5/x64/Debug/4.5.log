@@ -1,0 +1,4 @@
+﻿  4.5.cpp
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Class 4\4.5\4.5.cpp(8,6): warning C4101: 'sum': unreferenced local variable
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Class 4\4.5\4.5.cpp(7,39): warning C4101: 'average': unreferenced local variable
+  4.5.vcxproj -> C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Class 4\Lab 4\x64\Debug\4.5.exe

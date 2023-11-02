@@ -1,0 +1,600 @@
+1.
+// Calculate charges for 3 cars at parking garage.
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+double calculateCharges( double ); // function prototype
+
+
+int main()
+{
+   double hour; // number of hours for current car
+   double currentCharge; // parking charge for current car
+   double totalCharges = 0.0; // total charges
+   double totalHours = 0.0; // total number of hours
+   bool first = true; // used for printing table headers
+
+   cout << fixed; // set floating-point number format
+   cout << "Enter the hours parked for 3 cars: ";
+
+   // loop 3 times for 3 cars
+   for ( int i = 1; i <= 3; i++ )
+   {
+      cin >> hour;
+      totalHours += hour; // add current hours to total hours
+
+      // if first time through loop, display headers
+      if ( first )
+      {
+         cout << setw( 5 ) << "Car" << setw( 15 ) << "Hours"
+            << setw( 15 ) << "Charge\n";
+
+         first = false; // prevent from printing again
+      } // end if
+
+      // calculate current car's parking charge
+      currentCharge = calculateCharges( hour );
+      totalCharges += currentCharge; // update total charges
+
+      // display row data for current car
+      cout << setw( 3 ) << i << setw( 17 ) << setprecision( 1 ) << hour
+         << setw( 14 ) << setprecision( 2 ) << currentCharge << "\n";
+   } // end for
+
+   // display row data for totals
+   cout << setw( 7 ) << "TOTAL" << setw( 13 ) << setprecision( 1 )
+      << totalHours << setw( 14 ) << setprecision( 2 )
+      << totalCharges << endl;
+} // end main
+
+// calculateCharges returns charge according to number of hours
+double calculateCharges( double hours )
+{
+   double charge; // calculated charge
+
+   if ( hours < 3.0 ) // $2 for up to 3 hours
+      charge = 2.0;
+   else // $.50 for each extra hour
+      charge = 2.0 + .5 * ceil( hours - 3.0 );
+
+   // return charge, ensuring charge is not over $10.00
+   return ( charge > 10.0 ? 10.0 : charge );
+} // end function calculateCharges
+__________________________________________________________________________________
+2.
+// Rounding numbers using floor.
+#include <iostream> 
+#include <iomanip> 
+#include <cmath>
+using namespace std;
+
+double roundToIntegers( double ); // function prototype
+
+int main()
+{
+   double x; // current input
+   double y; // current input rounded
+
+   cout << fixed; // set floating-point number format
+
+   // loop for 5 inputs
+   for ( int loop = 1; loop <= 5; loop++ ) 
+   {
+      cout << "Enter a number: ";
+      cin >> x;
+
+      y = roundToIntegers( x ); // y holds rounded input
+      cout << setprecision( 6 ) << x << " rounded is "
+         << setprecision( 1 ) << y << endl;
+   } // end for
+} // end main
+
+// roundToIntegers rounds 5 inputs
+double roundToIntegers( double value )
+{
+	return floor( value + .5 ); 
+} // end function roundToIntegers
+___________________________________________________________________________________________
+
+3.
+// Calculate exponentiation of integers.
+#include <iostream>
+using namespace std;
+
+int integerPower( int, int ); // function prototype
+
+int main()
+{
+   int exp; // integer exponent
+   int base; // integer base
+
+   cout << "Enter base and exponent: ";
+   cin >> base >> exp;
+   cout << base << " to the power " << exp << " is: "
+      << integerPower( base, exp ) << endl;
+} // end main
+
+// integerPower calculates and returns b raised to the e power
+int integerPower( int b, int e )
+{
+   int product = 1; // resulting product
+
+   // multiply product times b e number of times
+   for ( int i = 1; i <= e; i++ )
+      product *= b;
+   
+   return product; // return resulting product
+} // end function integerPower
+
+________________________________________________________________________________________________
+4.
+// Determine whether inputs are odd or even.
+#include <iostream>
+using namespace std;
+
+bool isEven( int ); // function prototype
+
+int main()
+{
+   int x; // current input
+      
+   // loop for 3 inputs
+   for ( int i = 1; i <= 3; i++ ) 
+   {
+      cout << "Enter an integer: ";
+      cin >> x;
+   
+      // determine if input is even
+      if ( isEven( x ) )
+         cout << x << " is an even integer\n\n";
+      else
+         cout << x << " is an odd integer\n\n";
+   } // end for
+
+   cout << endl;
+} // end main
+
+// isEven returns true if a is even 
+bool isEven( int a )
+{
+   return !( a % 2 );
+} // end function isEven
+___________________________________________________________________________________________________
+
+5.
+// Displays a solid square of asterisks.
+#include <iostream>
+using namespace std;
+
+void square( int ); // function prototype
+
+int main()
+{
+   int side; // input side length
+
+   cout << "Enter side: ";
+   cin >> side;
+   cout << '\n';
+
+   square( side ); // display solid square of asterisks
+   cout << endl;
+} // end main
+
+// square displays solid square of asterisks with specified side
+void square( int side )
+{
+   // loop side times for number of rows
+   for ( int row = 1; row <= side; row++ ) 
+   {
+      // loop side times for number of columns
+      for ( int col = 1; col <= side; col++ )
+         cout << '*';
+
+      cout << '\n';
+   } // end for
+} // end function square
+
+__________________________________________________________________________________________________
+6.
+// Displays a solid square of input character.
+#include <iostream>
+using namespace std;
+
+void square( int, char ); // function prototype
+
+int main()
+{
+   int side; // input side length
+   char character; // fill character
+
+   cout << "Enter a character and the side length: ";
+   cin >> character >> side;
+   cout << '\n';
+
+   square( side, character ); // display solid square of input character
+   cout << endl;
+} // end main
+
+// square displays solid square of fillCharacter with specified side
+void square( int side, char fillCharacter )
+{
+   // loop side times for number of rows
+   for ( int row = 1; row <= side; row++ ) 
+   {
+      // loop side times for number of columns
+      for ( int col = 1; col <= side; col++ )
+         cout << fillCharacter;
+
+      cout << '\n';
+   } // end for
+} // end function square
+
+__________________________________________________________________________________________________________
+
+7.
+// Print input number as series of digits,
+// each pair of which is separated by two spaces.
+#include <iostream>
+using namespace std;
+
+int quotient( int, int ); // function prototype
+int remainder( int, int ); // function prototype
+void printDigits( int ); // function prototype
+
+int main()
+{
+   int number; // input number
+
+   do
+   {
+      cout << "Enter an integer between 1 and 32767: ";
+      cin >> number;
+   } // end do
+   while ( number < 1 || number > 32767 );
+
+   cout << "The digits in the number are:\n";
+   printDigits( number ); // call function to print digits
+   cout << endl; // add trailing newline
+} // end main
+
+// Part A: determine quotient using integer division
+int quotient( int a, int b )
+{
+   return a / b;
+} // end function quotient
+
+// Part B: determine remainder using the modulus operator
+int remainder( int a, int b )
+{
+   return a % b;
+} // end function remainder
+
+// Part C: print digits of an integer separated by two spaces
+void printDigits( int number )
+{
+   int divisor = 10000; // current divisor
+
+   // prevent leading zeros from being printed
+   while ( number < divisor )
+      divisor = quotient( divisor, 10 );
+
+   // determine and print each digit
+   while ( divisor >= 1 )
+   {
+      // use quotient to determine current digit
+      cout << quotient( number, divisor ) << "  ";
+
+      // update number to be remainder
+      number = remainder( number, divisor );
+
+      // update divisor for next digit
+      divisor = quotient( divisor, 10 );
+   } // end while
+} // end function printDigits
+
+__________________________________________________________________________
+
+8.
+// Calculate amount of time in seconds between two times.
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+unsigned seconds( unsigned, unsigned, unsigned ); // function prototype
+
+int main()
+{
+   unsigned hours; // current time's hours
+   unsigned minutes; // current time's minutes
+   unsigned secs; // current time's seconds
+   double first; // first time, in seconds
+   double second; // second time, in seconds
+   double difference; // difference between two times, in seconds
+
+   cout << "Enter the first time as three integers: ";
+   cin >> hours >> minutes >> secs;
+   first = seconds( hours, minutes, secs ); // calculate first time
+
+   cout << "Enter the second time as three integers: ";
+   cin >> hours >> minutes >> secs;
+   second = seconds( hours, minutes, secs ); // calculate second time
+   difference = fabs( first - second ); // calculate difference
+
+   // display difference
+   cout << "The difference between the times is "
+      << difference << " seconds" << endl;
+} // end main
+
+// seconds returns number of seconds since clock "struck 12"
+// given input time as hours h, minutes m, seconds s
+unsigned seconds( unsigned h, unsigned m, unsigned s )
+{
+   return 3600 * ( h >= 12 ? h - 12 : h ) + 60 * m + s;
+} // end function seconds
+
+__________________________________________________________________________________
+
+9.
+
+// Fahrenheit and Celsius equivalents.
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int celsius( int ); // function prototype
+int fahrenheit( int ); // function prototype
+
+int main()
+{
+   // display table of Fahrenheit equivalents of Celsius temperatures
+   cout << "Fahrenheit equivalents of Celsius temperatures:" << endl;
+
+   // create 4 sets of table headers
+   for ( int t = 0; t < 4; t++ )
+      cout << setw( 7 ) << "Celsius" << setw( 12 ) << "Fahrenheit ";
+
+   cout << endl;
+
+   // display temperatures in blocks of 25
+   for ( int i = 0; i < 25; i++ ) 
+   {
+      for ( int j = 0; j <= 75; j += 25 ) 
+         cout << setw( 7 ) << i + j 
+            << setw( 11 ) << fahrenheit( i + j ) << ' ';
+
+      cout << endl;
+   } // end for
+
+   // display equivalent for 100
+   cout << setw( 64 ) << 100 << setw( 11 ) << fahrenheit( 100 ) << endl;
+
+   // display table of Celsius equivalents of Fahrenheit temperatures
+   cout << "\nCelsius equivalents of Fahrenheit temperatures:" << endl;
+
+   // create 4 sets of table headers
+   for ( int t = 0; t < 4; t++ )
+      cout << setw( 10 ) << "Fahrenheit" << setw( 9 ) << "Celsius ";
+
+   cout << endl;
+
+   // display temperatures in blocks of 45
+   for ( int i = 32; i < 77; i++ ) 
+   {
+      for ( int j = 0; j <= 135; j += 45 ) 
+         cout << setw( 10 ) << i + j 
+            << setw( 8 ) << celsius( i + j ) << ' ';
+
+      cout << endl;
+   } // end for
+
+   // display equivalent for 212
+   cout << setw( 67 ) << 212 << setw( 8 ) << celsius( 212 ) << endl;
+} // end main
+
+// celsius returns Celsius equivalent of fTemp,
+// given in Fahrenheit
+int celsius( int fTemp )
+{
+   return static_cast< int > ( 5.0 / 9.0 * ( fTemp - 32 ) );
+} // end function celsius
+
+// fahrenheit returns Fahrenheit equivalent of cTemp,
+// given in Celsius
+int fahrenheit( int cTemp )
+{
+   return static_cast< int > ( 9.0 / 5.0 * cTemp + 32 );
+} // end function fahrenheit
+
+_______________________________________________________________________________
+10.
+// Determine the smallest of 3 numbers.
+#include <iostream> 
+using namespace std;
+
+double smallest( double, double, double ); // function prototype
+
+int main()
+{
+   double x; // first input
+   double y; // second input
+   double z; // third input
+
+   cout << "Enter three numbers: ";
+   cin >> x >> y >> z;
+
+   // determine smallest value
+   cout << "The smallest value is " << smallest( x, y, z ) << endl;
+} // end main
+
+// smallest returns the smallest of a, b and c
+double smallest( double a, double b, double c )
+{
+   if ( a < b && a < c )
+      return a;
+   else if ( b < a && b < c )
+      return b;
+   else
+      return c;
+} // end function smallest
+
+_____________________________________________________________________________________
+
+11.
+// Determine perfect numbers between 1 and 1000.
+// A number is perfect if it is equal to the sum of its factors.
+#include <iostream>
+using namespace std;
+
+bool isPerfect( int ); // function prototype
+void printSum( int ); // function prototype
+
+int main()
+{
+   cout << "Perfect integers between 1 and 1000:" << endl;
+
+   // loop from 2 to 1000
+   for ( int j = 2; j <= 1000; j++ )
+   {
+      // if current integer is perfect 
+      if ( isPerfect( j ) ) 
+         printSum( j ); // print it as sum of factors
+   } // end for
+
+   cout << endl;
+} // end main
+
+// isPerfect returns true if value is perfect integer,
+// i.e., if value is equal to sum of its factors
+bool isPerfect( int value )
+{
+   int factorSum = 1; // current sum of factors
+
+   // loop through possible factor values
+   for ( int i = 2; i <= value / 2; i++ )
+   {
+      // if i is factor
+      if ( value % i == 0 )
+         factorSum += i; // add to sum
+   } // end for
+
+   // return true if value is equal to sum of factors
+   return factorSum == value;
+} // end function isPerfect
+
+// printSum displays value followed by factors in summation form
+void printSum( int value )
+{
+   cout << value << " = 1";
+
+   // loop through possible factor values
+   for ( int i = 2; i <= value / 2; i++ )
+   {
+      // if i is factor
+      if ( value % i == 0 )
+         cout << " + " << i; // display as part of sum
+   } // end for
+
+   cout << endl;
+} // end function printSum
+
+_________________________________________________________________________________
+
+12.
+// A and B Solution
+//Testing for prime numbers.
+#include <iostream> 
+#include <iomanip> 
+using namespace std;
+
+bool isPrime( int ); // function prototype
+
+int main()
+{
+   int count = 1;  // total number of primes found
+
+   cout << "The prime numbers from 1 to 10000 are:" << endl;
+   cout << setw( 6 ) << 2; // 2 is only even prime
+
+   // loop through odd numbers; even numbers > 2 cannot be prime
+   for ( int loop = 3; loop < 10000; loop += 2 )
+   {
+      if ( isPrime( loop ) ) // if current number prime
+      {
+         count++;
+         cout << setw( 6 ) << loop;
+      
+         if ( count % 10 == 0 ) // new line after 10 values displayed
+            cout << '\n';
+      } // end if
+   } // end for
+
+   cout << endl << "Total of " << count 
+      << " prime numbers between 1 and 10000." << endl;
+} // end main
+
+// isPrime returns true if n is prime
+bool isPrime( int n )
+{
+   // loop through possible factors
+   for ( int loop2 = 2; loop2 <= n / 2; loop2++ )
+   {
+      // if factor found, not prime
+      if ( n % loop2 == 0 )
+         return false;
+   } // end for
+
+   return true;
+} // end function isPrime
+______________________________________
+//  Part C Solution
+// Testing for prime numbers.
+#include <iostream> 
+#include <iomanip> 
+#include <cmath>
+using namespace std;
+
+bool isPrime( int ); // function prototype
+
+int main()
+{
+   int count = 1; // total number of primes found
+
+   cout << "The prime numbers from 1 to 10000 are:" << endl;
+   cout << setw( 6 ) << 2; // 2 is only even prime
+
+   // loop through odd numbers; even numbers > 2 cannot be prime
+   for ( int loop = 3; loop < 10000; loop += 2 )
+   {
+      // if current number prime
+      if ( isPrime( loop ) ) 
+      {
+         count++;
+         cout << setw( 6 ) << loop;
+      
+         // new line after 10 values displayed
+         if ( count % 10 == 0 )
+            cout << '\n';
+      } // end if
+   } // end for
+
+   cout << endl << "Total of " << count 
+      << " prime numbers between 1 and 10000." << endl;
+} // end main
+
+// isPrime returns true if n is prime
+bool isPrime( int n )
+{
+   // loop through possible factors
+   for ( int i = 2; 
+      i <= static_cast< int > ( sqrt( static_cast< double > ( n ) ) );
+      i++ )
+   {
+      // if factor found, not prime
+      if ( n % i == 0 )
+         return false;
+   } // end for
+
+   return true;
+} // end function prime

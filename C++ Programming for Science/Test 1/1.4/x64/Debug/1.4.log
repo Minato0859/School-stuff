@@ -1,0 +1,4 @@
+﻿  1.4.cpp
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 1\1.4\1.4.cpp(9,12): warning C4101: 'N': unreferenced local variable
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 1\1.4\1.4.cpp(9,9): warning C4101: 'i': unreferenced local variable
+  1.4.vcxproj -> C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 1\Test 1\x64\Debug\1.4.exe

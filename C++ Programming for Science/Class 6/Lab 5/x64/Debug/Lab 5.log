@@ -1,0 +1,6 @@
+﻿  5.cpp
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Class 6\Lab 5\5.cpp(46,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Class 6\Lab 5\5.cpp(71,21): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Class 6\Lab 5\5.cpp(120,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Class 6\Lab 5\5.cpp(144,21): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Lab 5.vcxproj -> C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Class 6\Lab 5\x64\Debug\Lab 5.exe

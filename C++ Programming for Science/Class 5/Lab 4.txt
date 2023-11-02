@@ -1,0 +1,144 @@
+
+
+// my first string
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main ()
+{
+  string mystring;
+  mystring = "This is a string";
+  cout << mystring;
+  return 0;
+}
+
+The extraction operator can be used on cin to get strings of characters in the same way as with fundamental data types:
+
+string mystring;
+cin >> mystring;
+
+However, cin extraction always considers spaces (whitespaces, tabs, new-line...) as terminating the value being extracted, 
+and thus extracting a string means to always extract a single word, not a phrase or an entire sentence.
+To get an entire line from cin, there exists a function, called getline, that takes the stream (cin) as first argument, 
+and the string variable as second. 
+For example:
+
+// cin with strings
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main ()
+{
+  string mystr;
+  cout << "What's your name? ";
+  getline (cin, mystr);
+  cout << "Hello " << mystr << ".\n";
+  cout << "What is your favorite team? ";
+  getline (cin, mystr);
+  cout << "I like " << mystr << " too!\n";
+  return 0;
+}
+
+The standard behavior that most users expect from a console program is that each time the program queries the user for input, 
+the user introduces the field, and then presses ENTER (or RETURN). That is to say, input is generally expected to happen in 
+terms of lines on console programs, and this can be achieved by using getline to obtain input from the user. 
+Therefore, unless you have a strong reason not to, you should always use getline to get input in your console programs instead
+of extracting from cin.
+
+Conditional ternary operator ( ? )
+
+The conditional operator evaluates an expression, returning one value ( result1) if that expression evaluates to true, and a different one 
+(result2) if the expression evaluates as false. Its syntax is:
+
+condition ? result1 : result2 
+
+If condition is true, the entire expression evaluates to result1, and otherwise to result2.
+
+7==5 ? 4 : 3     // evaluates to 3, since 7 is not equal to 5.
+7==5+2 ? 4 : 3   // evaluates to 4, since 7 is equal to 5+2.
+5>3 ? a : b      // evaluates to the value of a, since 5 is greater than 3.
+a>b ? a : b      // evaluates to whichever is greater, a or b.  
+
+
+For example:
+
+// conditional operator
+
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+  int a,b,c;
+
+  a=2;
+  b=7;
+  c = (a>b) ? a : b;
+
+  cout << c << '\n';
+}
+7
+
+In this example, a was 2, and b was 7, so the expression being evaluated (a>b) was not true, thus the first value specified after the question 
+mark was discarded in favor of the second value (the one after the colon) which was b (with a value of 7).
+
+Rewrite the previous example with a and b given as input from the keyboard.
+
+Problem 4 from Lab_Work_3 was asking you to calculate the average grade of five scores.Add to the program the logic needed to print PASSED if 
+the grade was larger or equal than 60 and FAILED if it was smaller than 60.
+
+if ( grade >= 60)
+	cout << "PASSED";
+else 
+	cout << "" FAILED";
+
+Using the conditional operator same effect can be obtained by writing., on a single line:
+
+grade >= 60 ? cout << "PASSED" : cout << "FAILED";
+
+OR
+
+cout << ( grade >= 60 ? "PASSED" : "FAILED");
+
+If I want to print the grade in letter format:
+
+if ( grade >= 90)
+	cout << "A";
+else if ( grade >= 80)
+	   cout << "B";
+     else if ( grade >= 70)
+		cout << "C";
+	  else if ( grade > = 60)
+		  cout << "D";
+               else 
+		    cout <<"F";
+
+
+Remember that else relates to the last if
+So it's not a syntax error, but a logical one to write:
+
+if ( x > 5 )
+   if (y > 5 )
+      cout << " x and y are > 5 ";
+else 
+      cout << " x is <= 5 ";
+
+The else relates to the last if, so it means that y > 5 was found false.
+If I want to be meaning x > 5 was found false, I should write it like :
+
+if ( x > 5 )
+  {  if ( y > 5 )
+        cout << "x and y are > 5";
+  }
+else 
+  cout << " x is <= 5 "; 
+
+Exercice:
+
+
+Write a program that solves the quadratic equation.
+Your program should read a, b, c from the keyboard and solve the equation a*x*x + b*x + c = 0.
+You should check if a!=0.
+

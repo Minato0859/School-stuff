@@ -1,0 +1,82 @@
+1.Parking Charges
+A parking garage charges $2.00 minimum fee to park for up to three hours.
+The garage charges an additional $0.50 per hour for each hour or part therof
+in excess of three hours.The maximum charge for any given 24 hour period is $10.00.
+Assume that no car parks for longer than 24 hours at a time.Write a program that 
+calculates and prints the parking charges for each of the three customers who parked
+their cars in the garage yesterday. You should enter the hours parked for each customer.
+Your program should print the results in a neat tabular format and should calculate and 
+print the total of yesterday's receipts. The program should use the function calculateCharges
+to determine the charge for each customer. Your output should appear in the following format:
+
+Car	Hours	Charge
+1	1.5	2.00
+2	4.0	2.50
+3      24.0    10.00
+Total  29.5    14.50
+
+2.Rounding Numbers
+An application of function floor is rounding a value to the nearest integer.The statement
+ y = floor(x + 0.5);
+rounds the number x to the nearest integer and assigns the result to y. Write a program
+that reads several numbers and uses the preceding statement to round each of these numbers 
+to the nearest integer.For each number processed, write the original number and the rounded number.
+
+3.Write a function integerPower ( base, exponent) that returns the value of the base raised at the exponent.
+For example, integerPower(3,4) = 3* 3 * 3* 3. Assume that exponent is a positive, nonzero integer and the base
+is an integer.Do not use any math library functions.
+
+4.Write a program that inputs a series of integers and passes them one at a time to function isEven, which
+uses the modulus operator to determine whether an integer is even.The function should take an integer argument and
+return true if the integer is even and false otherwise.
+
+5.Write a function that displays at the left margin of the screen a solid square of asterisks whose side is specified 
+in integer parameter side.For eample, if side is 4, the function displays the following:
+****
+****
+****
+****
+
+6.Modify the function written at 5 to form the square out of whatever character is contained in character parameter
+fillCharacter. Thus, if side is 5 and fillCharacter is #, then this function should print:
+#####
+#####
+#####
+#####
+#####
+
+7. Write program segments that accomplish each of the following:
+a) Calculate the integer part of the quotient when integer a is divided by integer b.
+b) Calculate the integer remainder when integer a is divided by integer b.
+c) Use the program pieces developed in a) and b) to write a function that inputs an integer between 1 and 32767 and
+prints it as a series of digits, each pair of which is separated by two spaces. 
+For example, the integer 4562 should print:
+4  5  6  2
+
+8.Write a function that takes the time as three integer arguments ( hours, minutes,seconds) and returns the number of seconds
+since the last time the clock "struck 12". Use this function to calculate the amount of time in seconds between two times,
+both of which are within one 12-hour cycle of the clock.
+
+9.Implement the following integer functions:
+a)Function celsius reurns the Celsius equivalent of a Fahrenheittemperature.
+b)Function fahrenheit returns the Fahrenheit equivalent of a Celsius temperature.
+c)Use these functions to write a program that prints charts showing the Fahrenheit equivalent of all Celsius temperature from 
+0 to 100 degrees, and the Celsius equivalent of all Fahrenheit temperatures from 32 to 212 degrees.Print the outputs in a neat
+tabular format that minimizes the number of lines of output while remaining readable.
+
+10.Write a program that inputs three double-precision numbers and passes them to a function that returns the smallest number.
+
+11.Challenge
+An integer is said to be perfect number if the sum of its divisors, including 1 ( but not the number itself ) is equal to the number.
+For example, 6 is a perfect number because 6 = 1+2+3. Write a function isPerfect that determines whether parameter number is a perfect
+number.Use this function in a program that determines and prints all the perfect numbers between 1 and 1000. Print the divisors of each 
+perfect number to confirm that the number is indeed perfect.
+
+12.Challenge
+An integer is said to be prime if it's divisible by only 1 and itself.
+a)Write a function that determines whether a number is prime.
+b)Use this function in a program that determines and prints all the prime numbers between 2 and 10000.How many of these numbers do you
+really have to test before being sure that you've found all the primes?
+c)Initially, you might think that n/2 is the upper limit for which you must test to see whether a number is prime, but you need only
+go as high as the square root of n. Why ? Rewrite the program and run it both ways. Estimate the performance improvement.
+

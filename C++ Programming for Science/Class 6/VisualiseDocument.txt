@@ -1,0 +1,133 @@
+
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+
+using namespace std;
+ 
+int main()
+{ 
+    double x = 1.0;
+    double y = 3.0 / 7.0 + 2.0 / 7.0 + 2.0 / 7.0;
+
+    cout << fixed << showpoint << setprecision(17);
+
+    cout << "3.0 / 7.0 + 2.0 / 7.0 + 2.0 / 7.0 = "
+         << 3.0 / 7.0 + 2.0 / 7.0 + 2.0 / 7.0 << endl;
+
+    cout << "x = " << x << endl;
+    cout << "y = " << y << endl;
+
+    if (x == y)
+        cout << "x and y are the same." << endl;
+    else
+        cout << "x and y are not the same." << endl;
+
+    if (fabs(x - y) < 0.000001)
+        cout << "x and y are the same within the tolerance "
+             << "0.000001." << endl;
+    else
+        cout << " x and y are not the same within the "
+             << "tolerance 0.000001." << endl;
+
+    return 0;
+}
+
+//How to use predefined functions.
+//This program uses the math functions pow and sqrt to determine
+//and output the volume of a sphere, the distance between two 
+//points, respectively, and the string function length to find 
+//the number of characters in a string.
+//If the radius of the sphere is r, then the volume of the sphere
+//is (4/3)*PI*r^3. If (x1,y1) and (x2,y2) are the coordinates of two 
+//points in the XY-plane, then the distance between these points is 
+//sqrt((x2-x1)^2 + (y2-y1)^2).
+
+#include <iostream> 
+#include <cmath>
+#include <string>
+    
+using namespace std;
+
+const double PI = 3.1416;
+
+int main()  
+{
+    double sphereRadius;                                   //Line 1
+    double sphereVolume;                                   //Line 2
+    double point1X, point1Y;                               //Line 3
+    double point2X, point2Y;                               //Line 4
+    double distance;                                       //Line 5
+
+    string str;                                            //Line 6
+
+    cout << "Line 7: Enter the radius of the sphere: ";    //Line 7
+    cin >> sphereRadius;                                   //Line 8 
+    cout << endl;                                          //Line 9
+
+    sphereVolume = (4.0 / 3) * PI * pow(sphereRadius, 3);  //Line 10
+
+    cout << "Line 11: The volume of the sphere is: " 
+         << sphereVolume << endl << endl;                  //Line 11
+   
+    cout << "Line 12: Enter the coordinates of two "
+         << "points in the X-Y plane: ";                   //Line 12
+    cin >> point1X >> point1Y >> point2X >> point2Y;       //Line 13
+    cout << endl;                                          //Line 14
+
+    distance = sqrt(pow(point2X - point1X, 2)
+                    + pow(point2Y - point1Y, 2));          //Line 15
+
+    cout << "Line 16: The distance between the points "
+         << "(" << point1X << ", " << point1Y << ") and "
+         << "(" << point2X << ", " << point2Y << ") is: "
+         << distance << endl << endl;                      //Line 16
+
+    str = "Programming with C++";                          //Line 17
+
+    cout << "Line 18: The number of characters, " 
+         << "including blanks, in \"" << str << "\" is: "
+         << str.length() << endl;                          //Line 18
+
+    return 0;                                              //Line 19
+}
+
+
+
+//GPA program with bugs.  
+//Find and correct the logical errors in this program.
+
+#include <iostream>                                     //Line 1
+
+using namespace std;                                    //Line 2
+
+int main()                                              //Line 3
+{                                                       //Line 4
+    double gpa;                                         //Line 5
+    
+    cout << "Enter the GPA: ";                          //Line 6
+    cin >> gpa;                                         //Line 7
+    cout << endl;                                       //Line 8
+
+    if (gpa >= 2.0)                                     //Line 9
+        if (gpa >= 3.9)                                 //Line 10
+            cout << "Dean\'s Honor List." << endl;      //Line 11
+    else                                                //Line 12
+        cout << "The GPA is below the graduation "
+             << "requirement. \nSee your  "
+             << "academic advisor." << endl;            //Line 13
+
+    return 0;                                           //Line 14
+}                                                       //Line 15
+
+Problem
+
+One way to estimate the height of a child is to use the following formula, which uses the height of the parents:
+
+		Hmale_child = ((Hmother * 13 / 12) + Hfather)/2
+		Hfemale_child = ((Hfather * 12 / 13) + Hmother)/2
+
+All heights are in inches.Write a program that takes as input parameters the gender of the child, height of the mother in inches, 
+and height of the father in inches, and outputs the estimated height of the child in inches.   
+The user should be able to input the heights in feet and inches, and the program should output the estimated height of the child 
+in feet and inches.Use the integer data type to store the heights.

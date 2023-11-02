@@ -1,0 +1,89 @@
+﻿  barcode.cpp
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(52,18): error C2672: 'begin': no matching overloaded function found
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(53,4): error C2893: Failed to specialize function template 'unknown-type std::begin(_Container &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(1840): message : see declaration of 'std::begin'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(53,4): message : With the following template arguments:
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(53,4): message : '_Container=int *'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(53,4): error C2784: 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int *'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\initializer_list(55): message : see declaration of 'std::begin'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(52,18): error C2672: 'end': no matching overloaded function found
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(53,4): error C2893: Failed to specialize function template 'unknown-type std::end(_Container &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(1850): message : see declaration of 'std::end'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(53,4): message : With the following template arguments:
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(53,4): message : '_Container=int *'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(53,4): error C2784: 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int *'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\initializer_list(60): message : see declaration of 'std::end'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(53,4): error C3536: '<begin>$L0': cannot be used before it is initialized
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(53,4): error C3536: '<end>$L0': cannot be used before it is initialized
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(52,24): error C2100: illegal indirection
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(54,18): error C2672: 'begin': no matching overloaded function found
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(55,4): error C2893: Failed to specialize function template 'unknown-type std::begin(_Container &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(1840): message : see declaration of 'std::begin'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(55,4): message : With the following template arguments:
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(55,4): message : '_Container=int *'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(55,4): error C2784: 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int *'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\initializer_list(55): message : see declaration of 'std::begin'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(54,18): error C2672: 'end': no matching overloaded function found
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(55,4): error C2893: Failed to specialize function template 'unknown-type std::end(_Container &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(1850): message : see declaration of 'std::end'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(55,4): message : With the following template arguments:
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(55,4): message : '_Container=int *'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(55,4): error C2784: 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int *'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\initializer_list(60): message : see declaration of 'std::end'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(55,4): error C3536: '<begin>$L1': cannot be used before it is initialized
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(55,4): error C3536: '<end>$L1': cannot be used before it is initialized
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(54,24): error C2100: illegal indirection
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(56,18): error C2672: 'begin': no matching overloaded function found
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(57,4): error C2893: Failed to specialize function template 'unknown-type std::begin(_Container &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(1840): message : see declaration of 'std::begin'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(57,4): message : With the following template arguments:
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(57,4): message : '_Container=int *'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(57,4): error C2784: 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int *'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\initializer_list(55): message : see declaration of 'std::begin'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(56,18): error C2672: 'end': no matching overloaded function found
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(57,4): error C2893: Failed to specialize function template 'unknown-type std::end(_Container &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(1850): message : see declaration of 'std::end'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(57,4): message : With the following template arguments:
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(57,4): message : '_Container=int *'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(57,4): error C2784: 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int *'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\initializer_list(60): message : see declaration of 'std::end'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(57,4): error C3536: '<begin>$L2': cannot be used before it is initialized
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(57,4): error C3536: '<end>$L2': cannot be used before it is initialized
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(56,24): error C2100: illegal indirection
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(58,18): error C2672: 'begin': no matching overloaded function found
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(59,4): error C2893: Failed to specialize function template 'unknown-type std::begin(_Container &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(1840): message : see declaration of 'std::begin'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(59,4): message : With the following template arguments:
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(59,4): message : '_Container=int *'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(59,4): error C2784: 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int *'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\initializer_list(55): message : see declaration of 'std::begin'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(58,18): error C2672: 'end': no matching overloaded function found
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(59,4): error C2893: Failed to specialize function template 'unknown-type std::end(_Container &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(1850): message : see declaration of 'std::end'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(59,4): message : With the following template arguments:
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(59,4): message : '_Container=int *'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(59,4): error C2784: 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int *'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\initializer_list(60): message : see declaration of 'std::end'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(59,4): error C3536: '<begin>$L3': cannot be used before it is initialized
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(59,4): error C3536: '<end>$L3': cannot be used before it is initialized
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(58,24): error C2100: illegal indirection
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(60,18): error C2672: 'begin': no matching overloaded function found
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(61,4): error C2893: Failed to specialize function template 'unknown-type std::begin(_Container &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(1840): message : see declaration of 'std::begin'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(61,4): message : With the following template arguments:
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(61,4): message : '_Container=int *'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(61,4): error C2784: 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int *'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\initializer_list(55): message : see declaration of 'std::begin'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(60,18): error C2672: 'end': no matching overloaded function found
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(61,4): error C2893: Failed to specialize function template 'unknown-type std::end(_Container &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\xutility(1850): message : see declaration of 'std::end'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(61,4): message : With the following template arguments:
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(61,4): message : '_Container=int *'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(61,4): error C2784: 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int *'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\initializer_list(60): message : see declaration of 'std::end'
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(61,4): error C3536: '<begin>$L4': cannot be used before it is initialized
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(61,4): error C3536: '<end>$L4': cannot be used before it is initialized
+C:\Users\Bilal\OneDrive - Vanier College\Cegep\C++ Programming for Science\Test 2\barcode.cpp(60,24): error C2100: illegal indirection
+  Source1.cpp
+  Source2.cpp
+  Generating Code...

@@ -1,0 +1,3 @@
+﻿  Assignment 3.cpp
+C:\Users\Bilal\OneDrive - McGill University\Cegep\C++ Programming for Science\Assignments\Assignment 3\Assignment 3.cpp(40,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Assignment 3.vcxproj -> C:\Users\Bilal\OneDrive - McGill University\Cegep\C++ Programming for Science\Assignments\Assignment 3\x64\Debug\Assignment 3.exe

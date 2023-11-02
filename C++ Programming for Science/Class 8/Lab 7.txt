@@ -1,0 +1,109 @@
+1. Write a program that uses a forstatement to sum a sequence of integers.
+Assume that the first integer specifies the number of values remaining to be 
+entered. Your program should read only one value per input statement.
+A typical input sequence might be:
+5  100   200   300  400  500
+where 5 indicates that the subsequent 5 values are to be summed.
+
+2.Write a program that uses a for statement to calculate the average of several
+integers. assume the last value read is the sentinel 9999. A typical sequence might be:
+  10  8  11 7  9  9999
+indicating that the program should calculate the average of all values preceding 9999.
+
+3. Write a program that uses a for statement to find the smallest of several integers. 
+Assume that the first value read specifies the number of values remaining.
+
+4. Write a program that uses a for statement to calculate and print the product of odd 
+integers from 1 to 15.
+
+5. Write a program that uses for statements to print the following pattern.
+All asterisks should be printed by a single statement cout << '*';
+a) 
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+
+b)
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+c)
+**********
+ *********
+  ********
+   *******
+    ******
+     *****
+      ****
+       ***
+        **
+         *
+         
+d)
+         *
+        **
+       ***
+      ****
+     *****
+    ******
+   *******
+  ********
+ *********
+**********
+
+6. One interesting application of computers is drawing graphs and bar charts. 
+Write a program that reads 5 numbers ( each between 1 and 30). Assume that the user
+enters only valid values. For each number that's read, your program should print a line 
+containing that number of adjacent asterisks. 
+
+7.A mail order house sells five different products whose retail prices are: product 1- $2.98,
+product 2 - $4.50, product 3 - $9.98, product 4 - $4.49 and product 5 - $6.87.
+Write a program that reads a series of pairs of numbers as follows:
+a) product number
+b) quantity sold
+Your program should use a switch statement to determine the retail price for each product.
+Your program should calculate and display the total retail value of all products sold.
+Use a sentinel-controlled loop to determine when the program should stop looping and display the results.
+
+8. Calculate the value of pi from the infinite series:
+pi= 4 - 4/3 + 4/5 - 4/7 + 4/9 - 4/11 +... with a given accuracy.
+
+9. A right triangle can have sides that are all integers. A set of three integer values for the sides
+of a right triangle is called a Pythagorean triple. These three sides must satisfy the relationship
+that the sum of the squares of two sides is equal to the square of the hypotenuse. Find all Pythagorean 
+triples for side1, side2 and hypothenuse all no larger than 500. Use a triple-nested for loop that tries 
+all possibilities.This is an example of brute force computing.You'll learn in more advanced computer science 
+course that there are many interesting problems for which there is no known algorithmic approach other than 
+sheer brute force.
+
+10.Challenge
+In cryptarithmetic puzzles, mathematical equations are written using letters.  
+Each letter can be a digit from 0 to 9, but no two letters can be the same.   
+Here is a sample problem:
+
+SEND + MORE = MONEY
+
+A solution to the puzzle is S = 9, R = 8, O = 0, M = 1, Y = 2, E = 5, N = 6, D = 7
+Write a program that finds solutions to the cryptarithmetic puzzle of:
+
+TOO + TOO + TOO + TOO = GOOD
+
+The simplest technique is to use a nested loop for each unique letter (in this case T, O, G, D). 
+The loops would systematically assign the digits from 0-9 to each letter.   
+For example, it might first try T = 0, O = 0, G = 0, D = 0, then T = 0, O = 0, G =0, D = 1, then T = 0, O = 0, G = 0, D = 2, etc.
+up to T = 9, O = 9, G = 9, D = 9.  In the loop body test that each variable is unique and that the equation is satisfied.  
+Output the values for the letters that satisfy the equation.
