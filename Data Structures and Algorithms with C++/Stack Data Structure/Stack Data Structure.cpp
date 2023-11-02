@@ -1,0 +1,46 @@
+//Stack Data Structure has two main ways of looking at it
+//1 - FILO-- > First in last out
+//2 - LIFO-- > Last in first out
+
+//Standard Stack Operations :
+
+//1 - push()-- > Place an item onto the stack.If there is no place for new item, stack is in overflow state
+//2 - pop()-- > Return the item at the top of the stack and then remove it.If pop is called when stack is empty, it is in an underflow state
+//3 - isEmpty()-- > Tells if the stack is empty or not
+//4 - isfull()-- > Tells if the stack is full or not
+//5 - peek()-- > Access the stack at the i position
+//6 - count()-- > Get the number of items in the stack
+//7 - change()-- > Change the item at the i position
+//8 - display()-- > Display all items in the stack
+
+//Applications of Stack data structures :
+
+//-Balancing Symbols
+//- Infix to Postfix / Prefix conversion
+//- Redo and undo features
+//- Forward and backwards feauture in web browser
+//- Used in many algrithms like Tower of Hanoi, tree traversals, stock span problems, histogram problems
+//- Other applications can be Backtracking, Knight tour problem, rat in a maze, N queen problemand sudoku solver
+//- In graph Algorithms like Topological Sorting and Strongly Connected Components
+
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Stack
+{
+	private:
+		int top, array[5];
+
+		public:
+
+
+};
+
+int main()
+{
+
+	return 0
+}
